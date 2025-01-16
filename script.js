@@ -25,7 +25,7 @@ const biciclette = [
 
 let pesoLeggero = biciclette[0];
 
-// Ciclo sull'array di oggetti
+// Ciclo sull'array di oggetti utilizzando il for in
 
 for (let bici in biciclette) {
 
@@ -42,6 +42,48 @@ console.log(pesoLeggero);
 
 // Stampare a schermo la bici con peso minore.
 
-const lightestBike = document.getElementById('lightest_bike');
+const biciPiuLeggera = document.getElementById('lightest_bike');
 
-lightestBike.innerHTML = `La bici più leggera è la ${pesoLeggero.nome} e pesa solo ${pesoLeggero.peso} kg! 🚴`;
+biciPiuLeggera.innerHTML = `La bici più leggera è la ${pesoLeggero.nome} e pesa solo ${pesoLeggero.peso} kg! 🚴`;
+
+
+
+// Snack2
+
+// Creare un array di oggetti di squadre di calcio.
+// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+
+const squadre = [
+    {
+        "nome": "Squadra-1",
+        "punti": 0,
+        "falliSubiti": 0
+    },
+    {
+        "nome": "Squadra-2",
+        "punti": 0,
+        "falliSubiti": 0
+    },
+    {
+        "nome": "Squadra-3",
+        "punti": 0,
+        "falliSubiti": 0
+    },
+    {
+        "nome": "Squadra-4",
+        "punti": 0,
+        "falliSubiti": 0
+    }
+]
+
+// Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
+
+// Creo una funzione per generare numeri random
+
+function getRandomNum(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+// Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.

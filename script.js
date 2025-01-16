@@ -85,5 +85,14 @@ function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// Ciclo sull'array passo l'esecuzione della funzione,alle proprietà dell'oggetto
+
+for (let squadra in squadre) {
+
+    squadre[squadra].punti = getRandomNum(0, 50);
+    squadre[squadra].falliSubiti = getRandomNum(0, 50);
+
+    console.log(squadre[squadra].punti, squadre[squadra].falliSubiti);
+}
 
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.

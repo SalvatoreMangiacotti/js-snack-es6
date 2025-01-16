@@ -96,3 +96,19 @@ for (let squadra in squadre) {
 }
 
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+// Creo un nuovo array
+const nuovoArraySquadre = [];
+
+// Ciclo sull'array squadre
+for (indiceSquadra in squadre) {
+
+    // Inserisco nome e falli subiti nel nuovo array
+    nuovoArraySquadre.push(
+        squadre[indiceSquadra].nome,
+        squadre[indiceSquadra].falliSubiti
+    )
+
+}
+
+console.log(nuovoArraySquadre);

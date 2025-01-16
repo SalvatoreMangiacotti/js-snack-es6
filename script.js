@@ -21,6 +21,8 @@ const biciclette = [
     }
 ]
 
+
+
 // Creo una variabile alla quale assegno un valore da cui partire nel confronto con le altre bici
 
 let pesoLeggero = biciclette[0];
@@ -39,6 +41,8 @@ for (let bici in biciclette) {
 }
 
 console.log(pesoLeggero);
+
+
 
 // Stampare a schermo la bici con peso minore.
 
@@ -77,6 +81,8 @@ const squadre = [
     }
 ]
 
+
+
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 
 // Creo una funzione per generare numeri random
@@ -95,15 +101,22 @@ for (let squadra in squadre) {
     console.log(squadre[squadra].punti, squadre[squadra].falliSubiti);
 }
 
+
+
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+// METODO 1
+// Push delle proprietà di un oggetto all'interno di un nuovo array
 
 // Creo un nuovo array
 const nuovoArraySquadre = [];
 
 // Ciclo sull'array squadre
+
 for (indiceSquadra in squadre) {
 
     // Inserisco nome e falli subiti nel nuovo array
+
     nuovoArraySquadre.push(
         squadre[indiceSquadra].nome,
         squadre[indiceSquadra].falliSubiti
@@ -112,3 +125,30 @@ for (indiceSquadra in squadre) {
 }
 
 console.log(nuovoArraySquadre);
+
+
+
+// METODO 2
+// Push di un oggetto all'interno di un nuovo array
+
+// const nuovoArraySquadre = [];
+
+// // Ciclo sull'array squadre
+
+// for (indiceSquadra in squadre) {
+
+//     // Inserisco nome e falli subiti nel nuovo array
+
+//     nuovoArraySquadre.push(
+//         {
+//             "nome": squadre[indiceSquadra].nome,
+//             "falliSubiti": squadre[indiceSquadra].falliSubiti
+//         }
+//     )
+
+//     console.log(
+//         nuovoArraySquadre[indiceSquadra].nome,
+//         nuovoArraySquadre[indiceSquadra].falliSubiti
+//     )
+
+// }
